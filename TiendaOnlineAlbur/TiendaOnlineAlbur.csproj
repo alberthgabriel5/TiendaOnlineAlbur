@@ -66,7 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Maestra.Master" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\fonts\OleoScript-Regular.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,10 +82,63 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\bootstrap.min.3.2.2.css" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\css\estilo.css" />
+    <Content Include="public\css\fileinput.min.css" />
+    <Content Include="public\css\Login.css" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\img\11macmccardle-cityinamagnifyingglass.jpg" />
+    <Content Include="public\img\7strandsofmatter.jpg" />
+    <Content Include="public\img\f1.jpg" />
+    <Content Include="public\img\f2.jpg" />
+    <Content Include="public\img\fondo-interno.jpg" />
+    <Content Include="public\img\fondo.jpg" />
+    <Content Include="public\img\icon.ico" />
+    <Content Include="public\img\icono.ico" />
+    <Content Include="public\img\logo.png" />
+    <Content Include="public\img\logo2.png" />
+    <Content Include="public\img\mediacionvirtual.png" />
+    <Content Include="public\img\picDefault.jpg" />
+    <Content Include="public\img\user.png" />
+    <Content Include="public\js\bootstrap v3.3.2.js" />
+    <Content Include="public\js\bootstrap.js" />
+    <Content Include="public\js\CargarImagen.js" />
+    <Content Include="public\js\fileinput.min.js" />
+    <Content Include="public\js\implementacioncamvas.js" />
+    <Content Include="public\js\jquery-1.11.0.min.js" />
+    <Content Include="public\js\jquery-3.3.1.js" />
+    <Content Include="public\js\jquery-3.3.1.min.js" />
+    <Content Include="public\js\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestra.Master.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestra.Master.designer.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{b92e72cc-12dd-4445-ab97-24200ba660b8}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{840203c7-6f6f-499f-95fb-6c94c77c7b4f}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
