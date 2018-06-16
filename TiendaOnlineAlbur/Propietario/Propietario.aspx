@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TiendaOnlineAlbur.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Propietario.aspx.cs" Inherits="TiendaOnlineAlbur.Propietario.Propietario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <article> 
+
+<article> 
     <div class="col-lg-12 center-block">      
         
         <div class="col-lg-3"></div>        
@@ -11,4 +12,5 @@
     </div>
     
 </article>
+
 </asp:Content>

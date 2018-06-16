@@ -13,17 +13,15 @@ namespace Domain
         private String nickname;
         private String email;
         private String password;
-        private int edad;
-        private char rol;
+        private int edad;        
         private char activo;
 
-        public User(string nickname, string email, string password, int edad, char rol, char activo)
+        public User(string nickname, string email, string password, int edad, char activo)
         {
             this.nickname = nickname;
             this.email = email;
             this.password = password;
             this.edad = edad;
-            this.rol = rol;
             this.activo = activo;
         }
         public User()
@@ -32,7 +30,6 @@ namespace Domain
             this.email = "";
             this.password = "";
             this.edad = 0;
-            this.rol = 'B';
             this.activo ='I';
         }
 
@@ -86,20 +83,7 @@ namespace Domain
             {
                 edad = value;
             }
-        }
-
-        public char Rol
-        {
-            get
-            {
-                return rol;
-            }
-
-            set
-            {
-                rol = value;
-            }
-        }
+        }       
 
         public char Activo
         {
