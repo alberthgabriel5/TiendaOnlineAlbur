@@ -8,16 +8,18 @@ namespace Domain
 {
     
 
-    class User
+    public class User
     {
+        private int id;
         private String nickname;
         private String email;
         private String password;
         private int edad;        
         private char activo;
 
-        public User(string nickname, string email, string password, int edad, char activo)
+        public User(int id,string nickname, string email, string password, int edad, char activo)
         {
+            this.id = id;
             this.nickname = nickname;
             this.email = email;
             this.password = password;
@@ -95,6 +97,19 @@ namespace Domain
             set
             {
                 activo = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
     }

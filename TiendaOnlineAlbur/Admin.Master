@@ -42,7 +42,6 @@
                                         <!--                                    <li><a href="#">Submenu 1-3</a></li>-->
                                     </ul>
                                 </li>
-                                <li><a href="?controlador=User&accion=formular">Cuenta</a></li>
                                 <li><a href="?controlador=Sesion&accion=salir">Salir</a></li>
                             </ul>
                         </nav>

@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{B92E72CC-12DD-4445-AB97-24200BA660B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackUP", "BackUP", "{A28F5221-90E7-4E15-BCD2-D57E66E08C4A}"
+	ProjectSection(SolutionItems) = preProject
+		BackUP\Script_Procedimientos.sql = BackUP\Script_Procedimientos.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

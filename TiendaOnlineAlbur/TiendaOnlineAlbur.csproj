@@ -110,9 +110,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cliente\Cliente.aspx" />
+    <Content Include="Comprador\Cliente.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Maestra.Master" />
     <Content Include="Propietario\Propietario.aspx" />
@@ -134,7 +133,6 @@
     <Content Include="public\css\bootstrap.css" />
     <Content Include="public\css\bootstrap.min.3.2.2.css" />
     <Content Include="public\css\bootstrap.min.css" />
-    <Content Include="public\css\estilo.css" />
     <Content Include="public\css\fileinput.min.css" />
     <Content Include="public\css\Login.css" />
     <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
@@ -177,11 +175,11 @@
     <Compile Include="Cliente.Master.designer.cs">
       <DependentUpon>Cliente.Master</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\Cliente.aspx.cs">
+    <Compile Include="Comprador\Cliente.aspx.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente\Cliente.aspx.designer.cs">
+    <Compile Include="Comprador\Cliente.aspx.designer.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -190,9 +188,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Maestra.Master.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
