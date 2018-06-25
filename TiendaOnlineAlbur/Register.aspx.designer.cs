@@ -10,61 +10,43 @@
 namespace TiendaOnlineAlbur {
     
     
-    public partial class Default {
+    public partial class Register {
         
         /// <summary>
-        /// Control UpdatePanelLogin.
+        /// Control Nickname.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanelLogin;
+        protected global::System.Web.UI.WebControls.TextBox Nickname;
         
         /// <summary>
-        /// Control LblUsuario.
+        /// Control email.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUsuario;
+        protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
-        /// Control usuario.
+        /// Control Pasword.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuario;
+        protected global::System.Web.UI.WebControls.TextBox Pasword;
         
         /// <summary>
-        /// Control LblPassword.
+        /// Control txtAgeUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPassword;
-        
-        /// <summary>
-        /// Control password.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
-        
-        /// <summary>
-        /// Control ScriptManager1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.TextBox txtAgeUser;
         
         /// <summary>
         /// Control Result.
@@ -76,12 +58,12 @@ namespace TiendaOnlineAlbur {
         protected global::System.Web.UI.WebControls.Label Result;
         
         /// <summary>
-        /// Control Iniciar.
+        /// Control btnRegistrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Iniciar;
+        protected global::System.Web.UI.WebControls.Button btnRegistrar;
     }
 }

@@ -31,7 +31,7 @@
                                 <li class="active"><a href="Default.aspx">Inicio</a></li>                                
                                 <li ><a href="?controlador=User&accion=formular">Cuenta</a></li>
                                 <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
-                                <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>                                       
+                                <li><a href = "../Logut.aspx">Salir</a></li>                                       
                             </ul>
                         </nav>
                     </div>

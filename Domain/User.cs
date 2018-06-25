@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    
+
 
     public class User
     {
@@ -14,25 +14,21 @@ namespace Domain
         private String nickname;
         private String email;
         private String password;
-        private int edad;        
+        private int edad;
         private char activo;
+        private char rol;
 
-        public User(int id,string nickname, string email, string password, int edad, char activo)
+        public int Id
         {
-            this.id = id;
-            this.nickname = nickname;
-            this.email = email;
-            this.password = password;
-            this.edad = edad;
-            this.activo = activo;
-        }
-        public User()
-        {
-            this.nickname = "";
-            this.email = "";
-            this.password = "";
-            this.edad = 0;
-            this.activo ='I';
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
         }
 
         public string Nickname
@@ -85,7 +81,7 @@ namespace Domain
             {
                 edad = value;
             }
-        }       
+        }
 
         public char Activo
         {
@@ -100,17 +96,56 @@ namespace Domain
             }
         }
 
-        public int Id
+        public char Rol
         {
             get
             {
-                return id;
+                return rol;
             }
 
             set
             {
-                id = value;
+                rol = value;
             }
+        }
+
+        public User(int id, string nickname, string email, string password, int edad, char rol, char activo)
+        {
+            this.Id = id;
+            this.Nickname = nickname;
+            this.Email = email;
+            this.Password = password;
+            this.Edad = edad;
+            this.Rol = rol;
+            this.Activo = activo;
+        }
+        public User(string nickname, string email, string password, int edad)
+        {
+            this.Id = 0;
+            this.Nickname = nickname;
+            this.Email = email;
+            this.Password = password;
+            this.Edad = edad;
+            this.Rol = 'C';
+            this.Activo = 'A';
+        }
+        public User()
+        {
+
+            this.Id = 0;
+                this.Nickname  = "";
+            this.Email  = "";
+            this.Password  = "";
+            this.Edad  = 0;
+            this.Rol = 'B';
+            this.Activo  = 'I';
+        }
+
+    
+        override 
+        public String ToString()
+        {
+            return this.Nickname + " - " + this.Email + " - "+this.Password;
         }
     }
 }

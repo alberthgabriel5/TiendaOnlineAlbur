@@ -11,7 +11,15 @@ namespace TiendaOnlineAlbur
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["rol"] == null)
+            {
+                Response.Redirect("../Default.aspx");
+            }else if ((char)Session["rol"] == 'C')
+                {
+                    Response.Redirect("../Comprador/Cliente.aspx");
+                }
+            
+            
         }
     }
 }

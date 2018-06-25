@@ -8,7 +8,7 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-    min-height: max-content;
+    min-height: 100%;
 }
 .formulario{
     transition: 2s;

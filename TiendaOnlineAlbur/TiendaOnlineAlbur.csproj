@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -24,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,16 +114,19 @@
   <ItemGroup>
     <Content Include="Comprador\Cliente.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Logut.aspx" />
     <Content Include="packages.config" />
     <Content Include="Maestra.Master" />
+    <Content Include="Propietario\InsertarArticulo.aspx" />
     <Content Include="Propietario\Propietario.aspx" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="Admin.Master" />
+    <Content Include="Cliente.Master" />
     <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="public\fonts\OleoScript-Regular.ttf" />
-    <Content Include="Admin.Master" />
-    <Content Include="Cliente.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,9 +135,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="public\css\bootstrap.css" />
-    <Content Include="public\css\bootstrap.min.3.2.2.css" />
-    <Content Include="public\css\bootstrap.min.css" />
     <Content Include="public\css\fileinput.min.css" />
     <Content Include="public\css\Login.css" />
     <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
@@ -149,15 +151,13 @@
     <Content Include="public\img\mediacionvirtual.png" />
     <Content Include="public\img\picDefault.jpg" />
     <Content Include="public\img\user.png" />
-    <Content Include="public\js\bootstrap v3.3.2.js" />
     <Content Include="public\js\bootstrap.js" />
+    <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\js\CargarImagen.js" />
     <Content Include="public\js\fileinput.min.js" />
-    <Content Include="public\js\implementacioncamvas.js" />
-    <Content Include="public\js\jquery-1.11.0.min.js" />
     <Content Include="public\js\jquery-3.3.1.js" />
-    <Content Include="public\js\jquery-3.3.1.min.js" />
-    <Content Include="public\js\script.js" />
+    <Content Include="public\js\npm.js" />
+    <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +189,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logut.aspx.cs">
+      <DependentUpon>Logut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logut.aspx.designer.cs">
+      <DependentUpon>Logut.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Maestra.Master.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,12 +204,26 @@
       <DependentUpon>Maestra.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propietario\InsertarArticulo.aspx.cs">
+      <DependentUpon>InsertarArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Propietario\InsertarArticulo.aspx.designer.cs">
+      <DependentUpon>InsertarArticulo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Propietario\Propietario.aspx.cs">
       <DependentUpon>Propietario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Propietario\Propietario.aspx.designer.cs">
       <DependentUpon>Propietario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -215,12 +236,15 @@
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
