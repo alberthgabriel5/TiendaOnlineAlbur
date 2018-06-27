@@ -128,5 +128,36 @@ namespace Domain
             this.imagen = imagen;
             this.estado = estado;
         }
+        public Articulo( string nombre, string categoria, int precio, string descripcion)
+        {
+            this.id = 0;
+            this.nombre = nombre;
+            this.categoria = categoria;
+            this.precio = precio;
+            this.descripcion = descripcion;
+            this.estado = 'A';
+            selectPic();
+        }
+
+        public void selectPic(){
+            if (this.categoria== "Mouse"){
+               this.imagen = "../public/img/cpu-diseno.jpg";
+            } else  if(this.categoria == "Monitor"){
+                this.imagen = "../public/img/LG-XXLN5300-Left-Angle.jpg";
+            } else if (this.categoria == "Teclado"){
+                this.imagen = "../public/img/aimk-600x600.jpg";
+            } else if(this.categoria == "Laptop"){
+                this.imagen = "../public/img/470577-bigger-display.jpg";
+            } else if (this.categoria == "CPU"){
+                this.imagen = "../public/img/victory-cabinet-250x250.png";
+            } else {
+                this.imagen = "../public/img/11macmccardle-cityinamagnifyingglass.jpg";
+            };                       
+        }
+        override
+        public string ToString()
+        {
+            return this.id +" - "+ nombre + " - " + categoria + " - " + precio + " - " + descripcion   + imagen+ estado;
+        }
     }
 }

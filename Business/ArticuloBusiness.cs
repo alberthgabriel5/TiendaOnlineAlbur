@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    class ArticuloBusiness
+    public class ArticuloBusiness
     {
        
             private ArticuloData articuloData;
@@ -33,7 +33,7 @@ namespace Business
                 this.articuloData.borrarArticulo(id);
             }//borrarArticulo
 
-            public Articulo actualizarArticulo(Articulo articulo)
+            public String actualizarArticulo(Articulo articulo)
             {
                 return this.articuloData.actualizarArticulo(articulo);
             }//ActualizarArticulo

@@ -18,7 +18,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container-fluid" style="width: 100%; height: 100%; min-height: max-content;">
+        <div class="container-fluid" style="width: 100%; height: 100%; min-height:100%;">
             <div class="container">
 
                 <div class="row">
@@ -29,15 +29,15 @@
                         <nav class="navbar navbar-default">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="./Default.aspx">Inicio</a></li>
-                                <li><a href="?controlador=User&accion=formular">Administradores</a></li>
+                                <li><a href="./InsertarArticulo.aspx">Insertar</a></li>
                                 <li><a href="?controlador=User&accion=formular">Cuenta</a></li>
                                 <li><a href="?controlador=User&accion=listar">Clientes</a></li>
                                 <li><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="?controlador=Product&accion=listar">Productos
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="./InsertarArticulo.aspx">Productos
                                     <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="">Manejo</a></li>
+                                        <li><a href="./InsertarArticulo.aspx">Manejo</a></li>
                                         <li><a href="./InsertarArticulo.aspx">Insertar</a></li>
                                         
                                     </ul>
@@ -60,20 +60,20 @@
                 <div class="row">
                     <!-- Footer -->
                     <footer class=" center-block page-footer font-small stylish-color-dark pt-4 mt-4">
-                        <hr>
+                        <hr/>
                         <!-- Grid column -->
                         <div class="col-md-12  text-center bg-info ">
 
                             <!-- Content -->
                             <h5 class="text-uppercase ">Tienda Generica Virtual Multiplataforma</h5>
                             <p lang="es">
-                                Proyecto 2 - Lenguajes para Aplicaciones Comerciales<br>
+                                Proyecto 2 - Lenguajes para Aplicaciones Comerciales<br/>
                                 Desarrollado con HTML5,PHP5.3, CSS, Javascript, JQuery
                             </p>
 
                         </div>
 
-                        <hr>
+                        <hr/>
 
                         <!-- Copyright -->
                         <div class="bg-success footer-copyright text-center py-3">
@@ -81,7 +81,7 @@
                             <a href="https://www.linkedin.com/in/alberth-calder%C3%B3n-78a35011b/">Albert Calder&oacute;n Alvarado</a> - B21190
                         </div>
                         <!-- Copyright -->
-                        <hr>
+                        <hr/>
                     </footer>
                     <!-- Footer -->
                 </div>

@@ -30,7 +30,7 @@ namespace Data
             cmdInsertar.Parameters.Add(new SqlParameter("@precio", articulo.Precio));
             cmdInsertar.Parameters.Add(new SqlParameter("@descripcion", articulo.Descripcion));
             cmdInsertar.Parameters.Add(new SqlParameter("@imagen", articulo.Imagen));
-            cmdInsertar.Parameters.Add(new SqlParameter("@activo", articulo.Estado));
+            //cmdInsertar.Parameters.Add(new SqlParameter("@activo", articulo.Estado));
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
@@ -85,8 +85,9 @@ namespace Data
         }
 
         //int id, String nombre, String categoria, float precio, String descripcion, String imagen, int estado)
-        public Articulo actualizarArticulo(Articulo articulo)
+        public String actualizarArticulo(Articulo articulo)
         {
+            try { 
             SqlConnection connection = new SqlConnection(this.connString);
             String sqlStoredProcedure = "sp_Actualizar_Articulo";//cambiar
             SqlCommand cmdBorrar = new SqlCommand(sqlStoredProcedure, connection);
@@ -102,7 +103,12 @@ namespace Data
             cmdBorrar.ExecuteNonQuery();
             cmdBorrar.Connection.Close();
 
-            return articulo;
+            return "Success";
+        } catch
+            {
+                return "Error";
+            }
+            
         }
-    }
+}
 }
