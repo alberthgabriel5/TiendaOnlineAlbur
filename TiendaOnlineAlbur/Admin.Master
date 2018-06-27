@@ -30,7 +30,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="./Default.aspx">Inicio</a></li>
                                 <li><a href="./InsertarArticulo.aspx">Insertar</a></li>
-                                <li><a href="?controlador=User&accion=formular">Cuenta</a></li>
+                                <%--<li><a href="?controlador=User&accion=formular">Cuenta</a></li>
                                 <li><a href="?controlador=User&accion=listar">Clientes</a></li>
                                 <li><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
                                 <li class="dropdown">
@@ -41,7 +41,7 @@
                                         <li><a href="./InsertarArticulo.aspx">Insertar</a></li>
                                         
                                     </ul>
-                                </li>
+                                </li>--%>
                                 <li><a href = "../Logut.aspx">Salir</a></li>
                             </ul>
                         </nav>

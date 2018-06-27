@@ -18,8 +18,11 @@ namespace Data
             this.connString = connString;
         } // constructor
 
-        public Articulo insertarArticulo(Articulo articulo)
+        public String insertarArticulo(Articulo articulo)
         {
+            try
+            {
+                
             SqlConnection connection = new SqlConnection(this.connString);
             String sqlStoredProcedure = "sp_Agregar_Articulo";//cambiar
             SqlCommand cmdInsertar = new SqlCommand(sqlStoredProcedure, connection);
@@ -35,8 +38,15 @@ namespace Data
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
             cmdInsertar.Connection.Close();
+                return "Success";
+            }
+            catch
+            {
+                return "Error";
+            }
 
-            return articulo;
+
+            
         } // insertarArticulo
 
         public LinkedList<Articulo> obtenerArticulo()

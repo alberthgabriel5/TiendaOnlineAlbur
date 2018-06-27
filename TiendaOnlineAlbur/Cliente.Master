@@ -29,8 +29,7 @@
                         <nav class="navbar navbar-default">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="Default.aspx">Inicio</a></li>                                
-                                <li ><a href="?controlador=User&accion=formular">Cuenta</a></li>
-                                <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
+                                
                                 <li><a href = "../Logut.aspx">Salir</a></li>                                       
                             </ul>
                         </nav>

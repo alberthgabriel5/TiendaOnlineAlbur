@@ -18,7 +18,7 @@ namespace Business
                 this.articuloData = new ArticuloData(connString);
             } // constructor
 
-            public Articulo insertarArticulo(Articulo articulo)
+            public String insertarArticulo(Articulo articulo)
             {
                 return this.articuloData.insertarArticulo(articulo);
             } // insertarArticulo

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,6 +13,9 @@ namespace TiendaOnlineAlbur.Comprador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string connectionString = WebConfigurationManager.ConnectionStrings["DBLENGUAJES"].ToString();
+            ArticuloBusiness articuloBusiness = new ArticuloBusiness(connectionString);
+            
 
         }
     }
