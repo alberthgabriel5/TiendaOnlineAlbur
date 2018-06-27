@@ -1,4 +1,5 @@
 ﻿using Business;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,8 @@ namespace TiendaOnlineAlbur.Comprador
         {
             string connectionString = WebConfigurationManager.ConnectionStrings["DBLENGUAJES"].ToString();
             ArticuloBusiness articuloBusiness = new ArticuloBusiness(connectionString);
-            
+            LinkedList<Articulo> articulos = articuloBusiness.obtenerArticulo();
+
 
         }
     }

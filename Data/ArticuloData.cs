@@ -74,7 +74,7 @@ namespace Data
                 articuloActual.Precio = int.Parse(currentRow["precio"].ToString());
                 articuloActual.Descripcion = currentRow["descripcion"].ToString();
                 articuloActual.Imagen = currentRow["imagen"].ToString();
-                articuloActual.Estado = char.Parse(currentRow["activo"].ToString());
+                articuloActual.Estado = 'A';
                 articulos.AddLast(articuloActual);
             } // foreeach
 
